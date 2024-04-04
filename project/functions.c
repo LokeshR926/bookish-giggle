@@ -14,15 +14,24 @@ void startGame(char mat[8][8]){
 		return;
 	}
 	else{
-			fprintf(file,"\n\t\t\t\t\t   1  2  3  4  5  6  7  8");
-			fprintf(file,"\n\t\t\t\t\t1 [%c][%c][%c][%c][%c][%c][%c][%c]",mat[0][0],mat[0][1],mat[0][2],mat[0][3],mat[0][4],mat[0][5],mat[0][6],mat[0][7]);
-			fprintf(file,"\n\t\t\t\t\t2 [%c][%c][%c][%c][%c][%c][%c][%c]",mat[1][0],mat[1][1],mat[1][2],mat[1][3],mat[1][4],mat[1][5],mat[1][6],mat[1][7]);
-			fprintf(file,"\n\t\t\t\t\t3 [%c][%c][%c][%c][%c][%c][%c][%c]",mat[2][0],mat[2][1],mat[2][2],mat[2][3],mat[2][4],mat[2][5],mat[2][6],mat[2][7]);
-			fprintf(file,"\n\t\t\t\t\t4 [%c][%c][%c][%c][%c][%c][%c][%c]",mat[3][0],mat[3][1],mat[3][2],mat[3][3],mat[3][4],mat[3][5],mat[3][6],mat[3][7]);
-			fprintf(file,"\n\t\t\t\t\t5 [%c][%c][%c][%c][%c][%c][%c][%c]",mat[4][0],mat[4][1],mat[4][2],mat[4][3],mat[4][4],mat[4][5],mat[4][6],mat[4][7]);
-			fprintf(file,"\n\t\t\t\t\t6 [%c][%c][%c][%c][%c][%c][%c][%c]",mat[5][0],mat[5][1],mat[5][2],mat[5][3],mat[5][4],mat[5][5],mat[5][6],mat[5][7]);
-			fprintf(file,"\n\t\t\t\t\t7 [%c][%c][%c][%c][%c][%c][%c][%c]",mat[6][0],mat[6][1],mat[6][2],mat[6][3],mat[6][4],mat[6][5],mat[6][6],mat[6][7]);
-			fprintf(file,"\n\t\t\t\t\t8 [%c][%c][%c][%c][%c][%c][%c][%c]",mat[7][0],mat[7][1],mat[7][2],mat[7][3],mat[7][4],mat[7][5],mat[7][6],mat[7][7]);
+			fprintf(file,"\n\t\t\t\t\t    1   2   3   4   5   6   7   8");
+			fprintf(file,"\n\t\t\t\t\t  ---------------------------------");
+			fprintf(file,"\n\t\t\t\t\t1 | %c |#%c#| %c |#%c#| %c |#%c#| %c |#%c#|",mat[0][0],mat[0][1],mat[0][2],mat[0][3],mat[0][4],mat[0][5],mat[0][6],mat[0][7]);
+			fprintf(file,"\n\t\t\t\t\t  ---------------------------------");
+			fprintf(file,"\n\t\t\t\t\t2 |#%c#| %c |#%c#| %c |#%c#| %c |#%c#| %c |",mat[1][0],mat[1][1],mat[1][2],mat[1][3],mat[1][4],mat[1][5],mat[1][6],mat[1][7]);
+			fprintf(file,"\n\t\t\t\t\t  ---------------------------------");
+			fprintf(file,"\n\t\t\t\t\t3 | %c |#%c#| %c |#%c#| %c |#%c#| %c |#%c#|",mat[2][0],mat[2][1],mat[2][2],mat[2][3],mat[2][4],mat[2][5],mat[2][6],mat[2][7]);
+			fprintf(file,"\n\t\t\t\t\t  ---------------------------------");
+			fprintf(file,"\n\t\t\t\t\t4 |#%c#| %c |#%c#| %c |#%c#| %c |#%c#| %c |",mat[3][0],mat[3][1],mat[3][2],mat[3][3],mat[3][4],mat[3][5],mat[3][6],mat[3][7]);
+			fprintf(file,"\n\t\t\t\t\t  ---------------------------------");
+			fprintf(file,"\n\t\t\t\t\t5 | %c |#%c#| %c |#%c#| %c |#%c#| %c |#%c#|",mat[4][0],mat[4][1],mat[4][2],mat[4][3],mat[4][4],mat[4][5],mat[4][6],mat[4][7]);
+			fprintf(file,"\n\t\t\t\t\t  ---------------------------------");
+			fprintf(file,"\n\t\t\t\t\t6 |#%c#| %c |#%c#| %c |#%c#| %c |#%c#| %c |",mat[5][0],mat[5][1],mat[5][2],mat[5][3],mat[5][4],mat[5][5],mat[5][6],mat[5][7]);
+			fprintf(file,"\n\t\t\t\t\t  ---------------------------------");
+			fprintf(file,"\n\t\t\t\t\t7 | %c |#%c#| %c |#%c#| %c |#%c#| %c |#%c#|",mat[6][0],mat[6][1],mat[6][2],mat[6][3],mat[6][4],mat[6][5],mat[6][6],mat[6][7]);
+			fprintf(file,"\n\t\t\t\t\t  ---------------------------------");
+			fprintf(file,"\n\t\t\t\t\t8 |#%c#| %c |#%c#| %c |#%c#| %c |#%c#| %c |",mat[7][0],mat[7][1],mat[7][2],mat[7][3],mat[7][4],mat[7][5],mat[7][6],mat[7][7]);
+			fprintf(file,"\n\t\t\t\t\t  ---------------------------------");
 	}
 	fclose(file);
 }
@@ -79,7 +88,7 @@ void matrix(char mat[8][8]){
 }
 
 // The function to move the white soilder.
-int P_soilder(int r, int c, int i, int j, char mat[8][8]){
+int c_soilder(int r, int c, int i, int j, char mat[8][8]){
 	
 	if(j==c&&i>r){
 		if(r==1&&(i==2||i==3)){
@@ -103,7 +112,7 @@ int P_soilder(int r, int c, int i, int j, char mat[8][8]){
 }
 
 // The function to move the black soilder.
-int p_soilder(int r, int c, int i, int j, char mat[8][8]){
+int s_soilder(int r, int c, int i, int j, char mat[8][8]){
 
 	if(j==c&&i<r){
 		if(r==6&&(i==5||i==4)){
@@ -429,19 +438,23 @@ int n_knights(int r,int c, int i, int j, char mat[8][8]){
 }
 // The function to move the king.
 int K_king(int r, int c, int i, int j, char mat[8][8]){
-	if((i==r+1||i==r-1||i==r)&&(j==c+1||j==c-1||j==c))
-		return 1;
+	if((i==r+1||i==r-1||i==r)&&(j==c+1||j==c-1||j==c)){
+		if(mat[i][j]==' '&&islower(mat[i][j]))
+			return 1;
+	}
 	return 0;
 }
 // The function to move black king.
 int k_king(int r, int c, int i,int j, char mat[8][8]){
-	if((i==r+1||i==r-1||i==r)&&(j==c+1||j==c-1||j==c))
-		return 1;
+	if((i==r+1||i==r-1||i==r)&&(j==c+1||j==c-1||j==c)){
+		if(mat[i][j]==' '&&isupper(mat[i][j]))
+			return 1;
+	}
 	return 0;
 }
 
 //The function to check weather move is check or not.
-int check(int r, int c,char mat[8][8]){
+/*int check(int r, int c,char mat[8][8]){
 	int a,b;
 	if(isupper(mat[r][c])){
 		// check the position of the k_king and find the path is true or false.
@@ -529,6 +542,95 @@ int check(int r, int c,char mat[8][8]){
 						break;
 		}
 	}
+}*/
+int lower_check(char mat[8][8]){
+	int a,b,c,d;
+	for(a=0;a<8;a++){
+		for(b=0;b<8;b++){
+			if(mat[a][b]=='k')
+				break;
+		}
+	}
+	for(c=0;c<8;c++){
+		for(d=0;d<8;d++){
+			if(isupper(mat[c][d])){
+				switch (mat[c][d])
+				{
+					case 'P':
+							if(c_soilder(c,d,a,b,mat))
+								return 1;
+							else
+								break;
+					case 'R':
+							 if(R_rock(c,d,a,b,mat))
+					 			return 1;
+							else
+								break;
+
+					case 'B':
+					 		if(B_bishop(c,d,a,b,mat))
+					 			return 1;
+							else
+								break;
+					case 'N':
+							if(N_knights(c,d,a,b,mat))
+								return 1;
+							else
+								break;
+					case 'Q':
+							if(Q_queen(c,d,a,b,mat))
+								return 1;
+							else 							
+								break;
+				
+				}
+			}
+		}
+	}
+}
+int upper_check(char mat[8][8]){
+	int a,b,c,d;
+	for(a=0;a<8;a++){
+		for(b=0;b<8;b++){
+			if(mat[a][b]=='K')
+				break;
+		}
+	}
+	for(c=0;c<8;c++){
+		for(d=0;d<8;d++){
+			if(islower(mat[c][d])){
+				switch (mat[c][d])
+				{
+					case 'p':
+							if(s_soilder(c,d,a,b,mat))
+								return 1;
+							else
+								break;
+					case 'r':
+							 if(r_rock(c,d,a,b,mat))
+					 			return 1;
+							else
+								break;
+					case 'b':
+					 		if(b_bishop(c,d,a,b,mat))
+					 			return 1;
+							else
+								break;
+					case 'n':
+							if(n_knights(c,d,a,b,mat))
+								return 1;
+							else
+								break;
+					case 'q':
+							if(q_queen(c,d,a,b,mat))
+								return 1;
+							else 							
+								break;
+				
+				}
+			}
+		}
+	}
 }
 // The to choose the pwon to be moved.
 int choice(mat){
@@ -539,16 +641,19 @@ int choice(mat){
 }
 // The function to take input from the user.
 void input(char mat[8][8]){
-	char ch;
+	char ch,o;
 	int r,c,i,j,check=0,a,b;
-	a=r; b=c;
 	printf("Select the position to be moved:......");
 	scanf("%d %d", &r,&c);
 	getchar();
 	if((0<r&&r<9)&&(0<c&&c<9)){
 		exit;
 	}
-	r=r-1; c=c-1;// a=r; b=c;
+	r=r-1; c=c-1;
+	/*if(flag==0){
+		a=r;
+		b=c;
+	}*/
 	ch=mat[r][c];
 	printf("you have selected %c",mat[r][c]);
 	if(isupper(ch)){
@@ -560,12 +665,20 @@ void input(char mat[8][8]){
 					getchar();
 					if((0<i&&i<9)&&(0<j&&j<9)){
 						i=i-1; j=j-1;
-						check=P_soilder(r,c,i,j,mat);
+						check=c_soilder(r,c,i,j,mat);
 						if(check){
-								
+							o=mat[i][j];	
 							mat[i][j]=mat[r][c];
 							mat[r][c]=' ';
-							if(check(a,b))
+							/*if(check(a,b)){
+								mat[r][c]=mat[i][j];
+								mat[i][j]=' ';
+							}*/
+							if(upper_check(mat)){
+								mat[r][c]=mat[i][j];
+								mat[i][j]=o;
+								input(mat);
+							}
 							startGame(mat);
 						}
 						else
@@ -582,8 +695,14 @@ void input(char mat[8][8]){
 						i=i-1; j=j-1;
 						check=R_rock(r,c,i,j,mat);
 						if(check){
+							o=mat[i][j];
 							mat[i][j]=mat[r][c];
 							mat[r][c]=' ';
+							if(upper_check(mat)){
+								mat[r][c]=mat[i][j];
+								mat[i][j]=o;
+								input(mat);
+							}
 							startGame(mat);
 						}
 						else
@@ -600,8 +719,14 @@ void input(char mat[8][8]){
 						i=i-1; j=j-1;
 						check=N_knights(r,c,i,j,mat);
 						if(check){
+							o=mat[i][j];
 							mat[i][j]=mat[r][c];
 							mat[r][c]=' ';
+							if(upper_check(mat)){
+								mat[r][c]=mat[i][j];
+								mat[i][j]=o;
+								input(mat);
+							}
 							startGame(mat);
 						}
 					}
@@ -615,8 +740,14 @@ void input(char mat[8][8]){
 						i=i-1; j=j-1;
 						check=B_bishop(r,c,i,j,mat);
 						if(check){
+							o=mat[i][j];
 							mat[i][j]=mat[r][c];
 							mat[r][c]=' ';
+							if(upper_check(mat)){
+								mat[r][c]=mat[i][j];
+								mat[i][j]=o;
+								input(mat);
+							}
 							startGame(mat);
 						}
 					}
@@ -630,8 +761,14 @@ void input(char mat[8][8]){
 						i=i-1; j=j-1;
 						check=Q_queen(r,c,i,j,mat);
 						if(check){
+							o=mat[i][j];
 							mat[i][j]=mat[r][c];
 							mat[r][c]=' ';
+							if(upper_check(mat)){
+								mat[r][c]=mat[i][j];
+								mat[i][j]=o;
+								input(mat);
+							}
 							startGame(mat);
 						}
 					}
@@ -644,8 +781,14 @@ void input(char mat[8][8]){
 					if((0<i&&i<9)&&(0<j&&j<9)){
 						check=K_king(r,c,i,j,mat);
 						if(check){
+							o=mat[i][j];
 							mat[i][j]=mat[r][c];
 							mat[r][c]=' ';
+							if(upper_check(mat)){
+								mat[r][c]=mat[i][j];
+								mat[i][j]=o;
+								input(mat);
+							}
 							startGame(mat);
 						}
 					}
@@ -661,10 +804,16 @@ void input(char mat[8][8]){
 					getchar();
 					i=i-1; j=j-1;
 					if((0<i&&i<9)&&(0<j&&j<9)){
-						check=p_soilder(r,c,i,j,mat);
+						check=s_soilder(r,c,i,j,mat);
 						if(check){
+							o=mat[i][j];
 							mat[i][j]=mat[r][c];
 							mat[r][c]=' ';
+							if(lower_check(mat)){
+								mat[r][c]=mat[i][j];
+								mat[i][j]=o;
+								input(mat);
+							}
 							startGame(mat);
 						}
 					}
@@ -680,8 +829,14 @@ void input(char mat[8][8]){
 						i=i-1; j=j-1;
 						check=r_rock(r,c,i,j,mat);
 						if(check){
+							o=mat[i][j];
 							mat[i][j]=mat[r][c];
 							mat[r][c]=' ';
+							if(lower_check(mat)){
+								mat[r][c]=mat[i][j];
+								mat[i][j]=o;
+								input(mat);
+							}
 							startGame(mat);
 						}
 					}
@@ -695,8 +850,14 @@ void input(char mat[8][8]){
 						i=i-1; j=j-1;
 						check=n_knights(r,c,i,j,mat);
 						if(check){
+							o=mat[i][j];
 							mat[i][j]=mat[r][c];
 							mat[r][c]=' ';
+							if(lower_check(mat)){
+								mat[r][c]=mat[i][j];
+								mat[i][j]=o;
+								input(mat);
+							}
 							startGame(mat);
 						}
 					}
@@ -710,8 +871,14 @@ void input(char mat[8][8]){
 						i=i-1; j=j-1;
 						check=b_bishop(r,c,i,j,mat);
 						if(check){
+							o=mat[i][j];
 							mat[i][j]=mat[r][c];
 							mat[r][c]=' ';
+							if(lower_check(mat)){
+								mat[r][c]=mat[i][j];
+								mat[i][j]=o;
+								input(mat);
+							}
 							startGame(mat);
 						}
 					}
@@ -725,8 +892,14 @@ void input(char mat[8][8]){
 						i=i-1; j=j-1;
 						check=q_queen(r,c,i,j,mat);
 						if(check){
+							o=mat[i][j];
 							mat[i][j]=mat[r][c];
 							mat[r][c]=' ';
+							if(lower_check(mat)){
+								mat[r][c]=mat[i][j];
+								mat[i][j]=o;
+								input(mat);
+							}
 							startGame(mat);
 						}
 					}
