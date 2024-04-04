@@ -660,21 +660,25 @@ void input(char mat[8][8]){
 		switch(ch){
 			case 'P':
 				do{
-					printf(":.:The position to be moved to :....");
+					printf(":.:The position to be moved to 1:....");
 					scanf("%d %d",&i,&j);
 					getchar();
 					if((0<i&&i<9)&&(0<j&&j<9)){
 						i=i-1; j=j-1;
+						printf("!");
 						check=c_soilder(r,c,i,j,mat);
 						if(check){
+							printf("qwerty");
 							o=mat[i][j];	
-							mat[i][j]=mat[r][c];
+							mat[i][j]='r';
+							// mat[i][j]=mat[r][c];
 							mat[r][c]=' ';
 							/*if(check(a,b)){
 								mat[r][c]=mat[i][j];
 								mat[i][j]=' ';
 							}*/
 							if(upper_check(mat)){
+								printf("asdfgh");
 								mat[r][c]=mat[i][j];
 								mat[i][j]=o;
 								input(mat);
@@ -685,7 +689,7 @@ void input(char mat[8][8]){
 							printf("***************invalid move**********");
 					}
 					}while(!check);
-				break;
+						break;
 			case 'R':
 				do{
 					printf(":.:The position to be moved to :....");
@@ -709,7 +713,7 @@ void input(char mat[8][8]){
 							printf("***************invalid move**********");
 					}
 				}while(!check);
-				break;
+					break;
 			case 'N':
 				while(!check){
 					printf(":.:The position to be moved to :....");
