@@ -14,24 +14,31 @@ void startGame(char mat[8][8]){
 		return;
 	}
 	else{
-			fprintf(file,"\n\t\t\t\t\t    1   2   3   4   5   6   7   8");
-			fprintf(file,"\n\t\t\t\t\t  ---------------------------------");
-			fprintf(file,"\n\t\t\t\t\t1 | %c |#%c#| %c |#%c#| %c |#%c#| %c |#%c#|",mat[0][0],mat[0][1],mat[0][2],mat[0][3],mat[0][4],mat[0][5],mat[0][6],mat[0][7]);
-			fprintf(file,"\n\t\t\t\t\t  ---------------------------------");
-			fprintf(file,"\n\t\t\t\t\t2 |#%c#| %c |#%c#| %c |#%c#| %c |#%c#| %c |",mat[1][0],mat[1][1],mat[1][2],mat[1][3],mat[1][4],mat[1][5],mat[1][6],mat[1][7]);
-			fprintf(file,"\n\t\t\t\t\t  ---------------------------------");
-			fprintf(file,"\n\t\t\t\t\t3 | %c |#%c#| %c |#%c#| %c |#%c#| %c |#%c#|",mat[2][0],mat[2][1],mat[2][2],mat[2][3],mat[2][4],mat[2][5],mat[2][6],mat[2][7]);
-			fprintf(file,"\n\t\t\t\t\t  ---------------------------------");
-			fprintf(file,"\n\t\t\t\t\t4 |#%c#| %c |#%c#| %c |#%c#| %c |#%c#| %c |",mat[3][0],mat[3][1],mat[3][2],mat[3][3],mat[3][4],mat[3][5],mat[3][6],mat[3][7]);
-			fprintf(file,"\n\t\t\t\t\t  ---------------------------------");
-			fprintf(file,"\n\t\t\t\t\t5 | %c |#%c#| %c |#%c#| %c |#%c#| %c |#%c#|",mat[4][0],mat[4][1],mat[4][2],mat[4][3],mat[4][4],mat[4][5],mat[4][6],mat[4][7]);
-			fprintf(file,"\n\t\t\t\t\t  ---------------------------------");
-			fprintf(file,"\n\t\t\t\t\t6 |#%c#| %c |#%c#| %c |#%c#| %c |#%c#| %c |",mat[5][0],mat[5][1],mat[5][2],mat[5][3],mat[5][4],mat[5][5],mat[5][6],mat[5][7]);
-			fprintf(file,"\n\t\t\t\t\t  ---------------------------------");
-			fprintf(file,"\n\t\t\t\t\t7 | %c |#%c#| %c |#%c#| %c |#%c#| %c |#%c#|",mat[6][0],mat[6][1],mat[6][2],mat[6][3],mat[6][4],mat[6][5],mat[6][6],mat[6][7]);
-			fprintf(file,"\n\t\t\t\t\t  ---------------------------------");
-			fprintf(file,"\n\t\t\t\t\t8 |#%c#| %c |#%c#| %c |#%c#| %c |#%c#| %c |",mat[7][0],mat[7][1],mat[7][2],mat[7][3],mat[7][4],mat[7][5],mat[7][6],mat[7][7]);
-			fprintf(file,"\n\t\t\t\t\t  ---------------------------------");
+			fprintf(file,"\n\t\t\t\t\t     1    2     3     4     5     6     7     8");
+			fprintf(file,"\n\t\t\t\t\t  ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
+			fprintf(file,"\n\t\t\t\t\t1 |  %c  |█ %c █|  %c  |█ %c █|  %c  |█ %c █|  %c  |█ %c █|",mat[0][0],mat[0][1],mat[0][2],mat[0][3],mat[0][4],mat[0][5],mat[0][6],mat[0][7]);
+			// fprintf(file,"\n\t\t\t\t\t  ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
+			fprintf(file,"\n\t\t\t\t\t  -------------------------------------------------");
+			fprintf(file,"\n\t\t\t\t\t2 |█ %c █|  %c  |█ %c █|  %c  |█ %c █|  %c  |█ %c █|  %c  |",mat[1][0],mat[1][1],mat[1][2],mat[1][3],mat[1][4],mat[1][5],mat[1][6],mat[1][7]);
+			// fprintf(file,"\n\t\t\t\t\t  ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
+			fprintf(file,"\n\t\t\t\t\t  -------------------------------------------------");
+			fprintf(file,"\n\t\t\t\t\t3 |  %c  |█ %c █|  %c  |█ %c █|  %c  |█ %c █|  %c  |█ %c █|",mat[2][0],mat[2][1],mat[2][2],mat[2][3],mat[2][4],mat[2][5],mat[2][6],mat[2][7]);
+			fprintf(file,"\n\t\t\t\t\t  -------------------------------------------------");
+			// fprintf(file,"\n\t\t\t\t\t  ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
+			fprintf(file,"\n\t\t\t\t\t4 |█ %c █|  %c  |█ %c █|  %c  |█ %c █|  %c  |█ %c █|  %c  |",mat[3][0],mat[3][1],mat[3][2],mat[3][3],mat[3][4],mat[3][5],mat[3][6],mat[3][7]);
+			fprintf(file,"\n\t\t\t\t\t  -------------------------------------------------");
+			// fprintf(file,"\n\t\t\t\t\t  ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
+			fprintf(file,"\n\t\t\t\t\t5 |  %c  |█ %c █|  %c  |█ %c █|  %c  |█ %c █|  %c  |█ %c █|",mat[4][0],mat[4][1],mat[4][2],mat[4][3],mat[4][4],mat[4][5],mat[4][6],mat[4][7]);
+			fprintf(file,"\n\t\t\t\t\t  -------------------------------------------------");
+			// fprintf(file,"\n\t\t\t\t\t  ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
+			fprintf(file,"\n\t\t\t\t\t6 |█ %c █|  %c  |█ %c █|  %c  |█ %c █|  %c  |█ %c █|  %c  |",mat[5][0],mat[5][1],mat[5][2],mat[5][3],mat[5][4],mat[5][5],mat[5][6],mat[5][7]);
+			fprintf(file,"\n\t\t\t\t\t  -------------------------------------------------");
+			// fprintf(file,"\n\t\t\t\t\t  ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
+			fprintf(file,"\n\t\t\t\t\t7 |  %c  |█ %c █|  %c  |█ %c █|  %c  |█ %c █|  %c  |█ %c █|",mat[6][0],mat[6][1],mat[6][2],mat[6][3],mat[6][4],mat[6][5],mat[6][6],mat[6][7]);
+			fprintf(file,"\n\t\t\t\t\t  -------------------------------------------------");
+			// fprintf(file,"\n\t\t\t\t\t  ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
+			fprintf(file,"\n\t\t\t\t\t8 |█ %c █|  %c  |█ %c █|  %c  |█ %c █|  %c  |█ %c █|  %c  |",mat[7][0],mat[7][1],mat[7][2],mat[7][3],mat[7][4],mat[7][5],mat[7][6],mat[7][7]);
+			fprintf(file,"\n\t\t\t\t\t  ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
 	}
 	fclose(file);
 }
@@ -88,7 +95,7 @@ void matrix(char mat[8][8]){
 }
 
 // The function to move the white soilder.
-int c_soilder(int r, int c, int i, int j, char mat[8][8]){
+int P_soilder(int r, int c, int i, int j, char mat[8][8]){
 	
 	if(j==c&&i>r){
 		if(r==1&&(i==2||i==3)){
@@ -112,7 +119,7 @@ int c_soilder(int r, int c, int i, int j, char mat[8][8]){
 }
 
 // The function to move the black soilder.
-int s_soilder(int r, int c, int i, int j, char mat[8][8]){
+int p_soilder(int r, int c, int i, int j, char mat[8][8]){
 
 	if(j==c&&i<r){
 		if(r==6&&(i==5||i==4)){
@@ -452,7 +459,13 @@ int k_king(int r, int c, int i,int j, char mat[8][8]){
 	}
 	return 0;
 }
+// The function for the checkmate.
+/*int check_mate(void){
+	int i;
+	if(upper_check(mat)&&!K_king()){
 
+	}*/
+}
 //The function to check weather move is check or not.
 /*int check(int r, int c,char mat[8][8]){
 	int a,b;
@@ -550,6 +563,8 @@ int lower_check(char mat[8][8]){
 			if(mat[a][b]=='k')
 				break;
 		}
+		if(mat[a][b]=='k')
+			break;
 	}
 	for(c=0;c<8;c++){
 		for(d=0;d<8;d++){
@@ -557,7 +572,7 @@ int lower_check(char mat[8][8]){
 				switch (mat[c][d])
 				{
 					case 'P':
-							if(c_soilder(c,d,a,b,mat))
+							if(P_soilder(c,d,a,b,mat))
 								return 1;
 							else
 								break;
@@ -587,6 +602,7 @@ int lower_check(char mat[8][8]){
 			}
 		}
 	}
+		return 0;
 }
 int upper_check(char mat[8][8]){
 	int a,b,c,d;
@@ -595,35 +611,52 @@ int upper_check(char mat[8][8]){
 			if(mat[a][b]=='K')
 				break;
 		}
+		if(mat[a][b]=='K')
+			break;
+
 	}
+	printf("%c",mat[a][b]);
 	for(c=0;c<8;c++){
 		for(d=0;d<8;d++){
 			if(islower(mat[c][d])){
+
 				switch (mat[c][d])
 				{
 					case 'p':
-							if(s_soilder(c,d,a,b,mat))
+
+							if(p_soilder(c,d,a,b,mat)){
+								printf("1");
 								return 1;
+							}
 							else
 								break;
 					case 'r':
-							 if(r_rock(c,d,a,b,mat))
+							 if(r_rock(c,d,a,b,mat)){
+								printf("2");
 					 			return 1;
+							 }
 							else
 								break;
 					case 'b':
-					 		if(b_bishop(c,d,a,b,mat))
+					 		if(b_bishop(c,d,a,b,mat)){
+								printf("3");
 					 			return 1;
+							}
 							else
 								break;
 					case 'n':
-							if(n_knights(c,d,a,b,mat))
+							if(n_knights(c,d,a,b,mat)){
+								printf("4");
+								printf("%d %d %d %d",a,b,c,d);
 								return 1;
+							}
 							else
 								break;
 					case 'q':
-							if(q_queen(c,d,a,b,mat))
+							if(q_queen(c,d,a,b,mat)){
+								printf("5");
 								return 1;
+							}
 							else 							
 								break;
 				
@@ -631,14 +664,9 @@ int upper_check(char mat[8][8]){
 			}
 		}
 	}
+	return 0;
 }
-// The to choose the pwon to be moved.
-int choice(mat){
-	int r,c;
-	printf("Select the position to be move:........");
-	scanf("%d %d",&r,&c);
-	r=r-1; c=c-1;
-}
+
 // The function to take input from the user.
 void input(char mat[8][8]){
 	char ch,o;
@@ -665,7 +693,7 @@ void input(char mat[8][8]){
 					getchar();
 					if((0<i&&i<9)&&(0<j&&j<9)){
 						i=i-1; j=j-1;
-						check=c_soilder(r,c,i,j,mat);
+						check=P_soilder(r,c,i,j,mat);
 						if(check){
 							o=mat[i][j];	
 							mat[i][j]=mat[r][c];
@@ -676,6 +704,7 @@ void input(char mat[8][8]){
 							}*/
 							if(upper_check(mat)){
 								mat[r][c]=mat[i][j];
+								printf(" fuck you");
 								mat[i][j]=o;
 								input(mat);
 							}
@@ -804,7 +833,7 @@ void input(char mat[8][8]){
 					getchar();
 					i=i-1; j=j-1;
 					if((0<i&&i<9)&&(0<j&&j<9)){
-						check=s_soilder(r,c,i,j,mat);
+						check=p_soilder(r,c,i,j,mat);
 						if(check){
 							o=mat[i][j];
 							mat[i][j]=mat[r][c];
@@ -920,5 +949,200 @@ void input(char mat[8][8]){
 					}
 				}
 		}
+		if(ch==' ')
+			input(mat);
 	}				
 }
+// The goto function to move to the specific position.
+void gotoxy(int x,int y)
+	{
+		printf("%c[%d;%df",0x1B,y,x);
+	}
+// The main menu function to display.
+int mainMenu(void)
+{
+	int x = 10, y = 5;
+	int yStart = y;
+	
+	int selected;
+	
+	printf("\e[1;H\e[2J"); //clear the console.
+	gotoxy(x,y++);
+	printf("New Game\n");
+	gotoxy(x,y++);
+	printf("Controls\n");
+	gotoxy(x,y++);
+	printf("Exit\n");
+	gotoxy(x,y++);
+
+	selected = menuSelector(x, y, yStart);
+
+	return(selected);
+}
+// The function to select the part of the menu.
+int menuSelector(int x, int y, int yStart)
+{
+	char key;
+	int i = 0;
+	x = x - 2;
+	gotoxy(x,yStart);
+	
+	printf(">");
+	
+	gotoxy(10,5);
+
+	
+	do
+	{
+		key = waitForAnyKey();
+		//printf("%c %d", key, (int)key);
+		if ( key == (char)UP_ARROW )
+		{
+			gotoxy(x,yStart+i);
+			printf(" ");
+			
+			if (yStart >= yStart+i ) 
+				i = y - yStart - 2;
+			else
+				i--;
+			gotoxy(x,yStart+i);
+			printf(">");
+		}
+		else
+			if ( key == (char)DOWN_ARROW )
+			{
+				gotoxy(x,yStart+i);
+				printf(" ");
+				
+				if (i+2 >= y - yStart ) 
+					i = 0;
+				else
+					i++;
+				gotoxy(x,yStart+i);
+				printf(">");				
+			}	
+			//gotoxy(1,1);
+			//printf("%d", key);
+	} while(key != (char)ENTER_KEY); //While doesn't equal enter... (13 ASCII code for enter) - note ubuntu is 10
+	return(i);
+}
+
+// The function to exit from the game.
+void exitYN(void)
+{
+	char pressed;
+	gotoxy(9,8);
+	printf("Are you sure you want to exit(Y/N)\n");
+	
+	do
+	{
+		pressed = waitForAnyKey();
+		pressed = tolower(pressed);
+	} while (!(pressed == 'y' || pressed == 'n'));
+	
+	if (pressed == 'y')
+	{
+		printf("\e[1;H\e[2J"); //clear the console
+		exit(1);
+	}
+	return;
+}
+// The function to load the game.
+void loadgame(void){
+	char mat[8][8];
+    printf("\e[1;H\e[2J");
+    matrix(mat);
+    startGame(mat);
+    display();
+    while(1){
+        printf("The player1's turn to play please selete the pown to move\n:");
+        input(mat);
+        //clrscr();
+        printf("\e[1;H\e[2J");
+        display();
+
+        printf("The player 2's turn to play, please selete the pown to move\n");
+        input(mat);
+        //clrscr();
+        printf("\e[1;H\e[2J");
+        display();
+    }
+}
+// 
+char waitForAnyKey(void)
+{
+	int pressed;
+	
+	while(!kbhit());
+	
+	pressed = getch();
+	//pressed = tolower(pressed);
+	return((char)pressed);
+}
+
+void controls(void)
+{
+	int x = 10, y = 5;
+    printf("\e[1;H\e[2J"); //clear the console
+	gotoxy(x,y++);
+	printf("Controls\n");
+	gotoxy(x++,y++);
+	printf("#first player is asked for the selection of the position to be moved:::::: ");
+	gotoxy(x,y++);
+	printf("#Then the position to which he wants to move is asked by the program if vaild it move or the repeats.");
+	gotoxy(x,y++);
+	printf("#how to select the postion to be moved which is first selet left displayed number->ENTER and then top one->ENTER.");
+	gotoxy(x,y++);
+	gotoxy(x,y++);
+	printf("#If the check is given the player is contnously asked to move the suitable move to avoid the check. ");
+	gotoxy(x,y++);
+	gotoxy(x,y++);
+	printf("#after the player 1 makes his move the player to given chance to move with same steps and rules.");
+	gotoxy(x,y++);
+	gotoxy(x,y++);
+	printf("P & Esc pauses the game.");
+	gotoxy(x,y++);
+	gotoxy(x,y++);
+	printf("Press any key to continue...");
+	waitForAnyKey();
+	return;
+}
+
+
+int kbhit(void)
+	{
+	  struct termios oldt, newt;
+	  int ch;
+	  int oldf;
+
+	  tcgetattr(STDIN_FILENO, &oldt);
+	  newt = oldt;
+	  newt.c_lflag &= ~(ICANON | ECHO);
+	  tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+	  oldf = fcntl(STDIN_FILENO, F_GETFL, 0);
+	  fcntl(STDIN_FILENO, F_SETFL, oldf | O_NONBLOCK);
+
+	  ch = getchar();
+
+	  tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+	  fcntl(STDIN_FILENO, F_SETFL, oldf);
+
+	  if(ch != EOF)
+	  {
+		ungetc(ch, stdin);
+		return 1;
+	  }
+
+	  return 0;
+	}
+
+	//http://www.experts-exchange.com/Programming/Languages/C/Q_10119844.html - posted by jos
+	char getch()
+	{
+		char c;
+		system("stty raw");
+		c= getchar();
+		system("stty sane");
+		//printf("%c",c);
+		return(c);
+	}
