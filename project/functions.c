@@ -464,8 +464,8 @@ int k_king(int r, int c, int i,int j, char mat[8][8]){
 	int i;
 	if(upper_check(mat)&&!K_king()){
 
-	}*/
-}
+	}
+}*/
 //The function to check weather move is check or not.
 /*int check(int r, int c,char mat[8][8]){
 	int a,b;
